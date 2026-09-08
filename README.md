@@ -1,9 +1,9 @@
-# Com Amor GV — Companhia e Cuidado
+# Com Amor GV - Companhia e Cuidado
 
 Site institucional de uma página para serviço de companhia e cuidado em **Governador Valadares/MG**: acompanhamento de idosos, apoio a neurodivergentes e cuidado de pets de pequeno porte. Venda 100% pelo WhatsApp.
 
 - **Status:** MVP em desenvolvimento
-- **Hospedagem:** Netlify (plano grátis, sem build, sem plugins) — deploy via GitHub conectado
+- **Hospedagem:** Netlify (plano grátis, sem build, sem plugins) - deploy via GitHub conectado
 - **Custo:** R$ 0
 
 ## Estrutura
@@ -15,7 +15,7 @@ com-amor-gv/
 ├── assets/
 │   ├── img/
 │   │   ├── foto-perfil.png   # foto real da profissional (publicada)
-│   │   └── foto1-ref.jpeg    # referência local — ignorada pelo git (.gitignore)
+│   │   └── foto1-ref.jpeg    # referência local - ignorada pelo git (.gitignore)
 │   └── logo.svg              # logo (coração + Com Amor GV)
 ├── .gitignore          # bloqueia dados pessoais e referências
 ├── README.md
@@ -25,7 +25,7 @@ com-amor-gv/
 
 ## Ver localmente
 
-Duplo clique em `index.html` — abre no navegador, sem servidor.
+Duplo clique em `index.html`: abre no navegador, sem servidor.
 
 ## Publicar / atualizar (Netlify Drop)
 
@@ -41,7 +41,7 @@ Duplo clique em `index.html` — abre no navegador, sem servidor.
 
 - **Nunca commitar:** fotos de clientes, documentos (CPF, RG, endereço), prints com dados pessoais, arquivos `*-ref.*`.
 - **Onde guardar esse material:** fora do repo (ex: pasta `Default Project/`, só local) ou nas pastas bloqueadas acima.
-- **Exceções intencionais e públicas:** foto da profissional (`foto-perfil.png`), WhatsApp comercial e cidade — são o conteúdo do site.
+- **Exceções intencionais e públicas:** foto da profissional (`foto-perfil.png`), WhatsApp comercial e cidade: são o conteúdo do site.
 - Antes de cada `push`, rode `git status` e confira que só entram arquivos do site.
 
 ## Editar conteúdo
@@ -53,7 +53,7 @@ Duplo clique em `index.html` — abre no navegador, sem servidor.
 
 ## Convenções
 
-- Termo padrão: **"idosos"** (não "sênior" — melhor busca e identificação do público)
+- Termo padrão: **"idosos"** (não "sênior", melhor busca e identificação do público)
 - Valores sempre como **"a combinar"** (varia por serviço, local, horas/dias)
 - Atendimento masculino **somente com referência**
 - Sem carro próprio: deixar explícito (a pé, ônibus/app ou carro da família)

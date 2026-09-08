@@ -1,11 +1,11 @@
-# Arquivos de referência local — nunca commitar/publicar via git
+# Arquivos de referência local - nunca commitar/publicar via git
 *-ref.*
 *-ref/
 ref/
 refs/
 referencias/
 
-# Dados pessoais e de clientes (LGPD) — nunca commitar
+# Dados pessoais e de clientes (LGPD) - nunca commitar
 dados-pessoais/
 clientes/
 documentos/

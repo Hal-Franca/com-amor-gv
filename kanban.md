@@ -1,8 +1,8 @@
-# Kanban — Com Amor GV
+# Kanban - Com Amor GV
 
 ## Done
 
-- [x] Nome definido: Com Amor GV — Companhia e Cuidado
+- [x] Nome definido: Com Amor GV - Companhia e Cuidado
 - [x] Decisão de plataforma: Netlify (plano grátis) como oficial; Canva só p/ artes do Instagram
 - [x] MVP `index.html` (7 seções: topo, sobre, serviços, como funciona, valores, FAQ, contato)
 - [x] Botões WhatsApp clicáveis `(33) 99171-7907` (4 links `wa.me`)
@@ -17,15 +17,15 @@
 - [ ] Revisar o site localmente (duplo clique no `index.html`)
 - [ ] Subir no Netlify Drop e testar no celular (link obscuro, **não divulgar ainda**)
 
-## To Do — site
+## To Do: site
 
 - [ ] Aprovação final do visual pela profissional
 - [ ] Divulgar link (bio do futuro Instagram)
 - [ ] Depoimentos reais (seção nova quando houver clientes)
-- [ ] Domínio próprio (ex: `comamorgv.com.br`, ~R$ 40–60/ano) — opcional
+- [ ] Domínio próprio (ex: `comamorgv.com.br`, ~R$ 40–60/ano) - opcional
 - [ ] Migrar deploy de Drop manual p/ Git + deploy automático (quando as edições ficarem frequentes)
 
-## To Do — Instagram (anotações)
+## To Do: Instagram (anotações)
 
 - Criar perfil comercial + WhatsApp Business com catálogo
 - Bio modelo:
@@ -43,4 +43,4 @@
 - Pilares: confiança (bastidor, depoimento, FAQ preço/deslocamento) · educativo (solidão idosa,
   autonomia, dicas de consulta, organização de remédios) · humanização (caminhada, café, datas)
 - Ferramentas grátis: Canva (artes, mesma paleta do site) + CapCut (reels) + celular
-- Reaproveitar `foto1-ref` (a com textos "Que sou eu?!") só como post de trajetória — nunca no site
+- Reaproveitar `foto1-ref` (a com textos "Que sou eu?!") só como post de trajetória - nunca no site
