@@ -15,7 +15,10 @@
 ## Doing
 
 - [ ] Revisar o site localmente (duplo clique no `index.html`)
-- [ ] Subir no Netlify Drop e testar no celular (link obscuro, **não divulgar ainda**)
+- [ ] Confirmar no Netlify: production branch `main`, auto publishing on, Deploy Previews on
+- [ ] Testar no celular via link oficial (não divulgar ainda)
+- [x] Título sem "ama" viúva + zero travessões (commit `20f4bc8`, já no `main`)
+- [x] Workflow de branches: `main` prod, `staging` teste, PR com preview
 
 ## To Do: site
 
@@ -23,7 +26,6 @@
 - [ ] Divulgar link (bio do futuro Instagram)
 - [ ] Depoimentos reais (seção nova quando houver clientes)
 - [ ] Domínio próprio (ex: `comamorgv.com.br`, ~R$ 40–60/ano) - opcional
-- [ ] Migrar deploy de Drop manual p/ Git + deploy automático (quando as edições ficarem frequentes)
 
 ## To Do: Instagram (anotações)
 

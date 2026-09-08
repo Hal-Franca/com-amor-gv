@@ -26,6 +26,13 @@ Instruções para agentes de IA trabalhando neste repositório.
 - Mobile-first: testar em 360px de largura. Não adicionar fontes externas (performance no 4G).
 - Nunca commitar fotos de clientes, dados pessoais ou arquivos `*-ref.*` - o `.gitignore` já bloqueia esses padrões; se um novo tipo de dado pessoal surgir, adicionar o padrão ao `.gitignore` antes de commitar.
 
+## Branches e deploy
+
+- `main` = produção: único branch que publica em `com-amor-gv.netlify.app`. Nunca commitar teste direto aqui.
+- `staging` = mudanças em teste: abrir PR `staging` -> `main` e conferir o Deploy Preview no celular antes do merge.
+- Branches `dev/*` ou `feat/*`: para experimentos maiores; apagar após o merge.
+- Netlify: Production branch `main`, auto publishing on, Deploy Previews on.
+
 ## Antes de finalizar qualquer mudança
 
 1. Conferir os 4 links `wa.me` funcionando.
