@@ -23,7 +23,7 @@ Instruções para agentes de IA trabalhando neste repositório.
 - Imagens em `assets/img/` com caminho relativo. Foto de perfil: `assets/img/foto-perfil.png`.
 - Paleta: vinho `#8E2A4A`, vinho escuro `#6E1F39`, rosa `#FCECEF`, bege `#FFF8F3`, texto `#4A3540`, verde zap `#25D366`.
 - Mobile-first: testar em 360px de largura. Não adicionar fontes externas (performance no 4G).
-- Nunca commitar fotos de clientes, dados pessoais ou arquivos `*-ref.*` nesta pasta.
+- Nunca commitar fotos de clientes, dados pessoais ou arquivos `*-ref.*` — o `.gitignore` já bloqueia esses padrões; se um novo tipo de dado pessoal surgir, adicionar o padrão ao `.gitignore` antes de commitar.
 
 ## Antes de finalizar qualquer mudança
 

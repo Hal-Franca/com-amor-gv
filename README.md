@@ -2,8 +2,8 @@
 
 Site institucional de uma página para serviço de companhia e cuidado em **Governador Valadares/MG**: acompanhamento de idosos, apoio a neurodivergentes e cuidado de pets de pequeno porte. Venda 100% pelo WhatsApp.
 
-- **Status:** MVP em revisão (não divulgar o link até aprovação)
-- **Hospedagem:** Netlify Drop, plano grátis (sem build, sem plugins)
+- **Status:** MVP em desenvolvimento
+- **Hospedagem:** Netlify (plano grátis, sem build, sem plugins) — deploy via GitHub conectado
 - **Custo:** R$ 0
 
 ## Estrutura
@@ -14,8 +14,10 @@ com-amor-gv/
 ├── netlify.toml        # headers de segurança p/ Netlify
 ├── assets/
 │   ├── img/
-│   │   └── foto-perfil.png   # foto real da profissional
+│   │   ├── foto-perfil.png   # foto real da profissional (publicada)
+│   │   └── foto1-ref.jpeg    # referência local — ignorada pelo git (.gitignore)
 │   └── logo.svg              # logo (coração + Com Amor GV)
+├── .gitignore          # bloqueia dados pessoais e referências
 ├── README.md
 ├── AGENTS.md           # instruções p/ agentes de IA
 └── kanban.md           # o que foi feito e próximos passos
@@ -32,7 +34,15 @@ Duplo clique em `index.html` — abre no navegador, sem servidor.
 3. Pronto: link `*.netlify.app` (renomeável em Site settings → Change site name)
 4. Para atualizar: edite os arquivos, arraste a pasta de novo em Deploys
 
-> Não commitar nem publicar arquivos de referência (`foto1-ref.jpeg`, `textos-para-canva-ref.txt` ficam fora desta pasta, em `Default Project/`).
+> Arquivos de referência e dados pessoais nunca vão para o git: o `.gitignore` bloqueia
+> `*-ref.*`, pastas `ref/`, `dados-pessoais/`, `clientes/`, `documentos/` e PDFs. Ver seção Segurança.
+
+## Segurança e dados pessoais (LGPD)
+
+- **Nunca commitar:** fotos de clientes, documentos (CPF, RG, endereço), prints com dados pessoais, arquivos `*-ref.*`.
+- **Onde guardar esse material:** fora do repo (ex: pasta `Default Project/`, só local) ou nas pastas bloqueadas acima.
+- **Exceções intencionais e públicas:** foto da profissional (`foto-perfil.png`), WhatsApp comercial e cidade — são o conteúdo do site.
+- Antes de cada `push`, rode `git status` e confira que só entram arquivos do site.
 
 ## Editar conteúdo
 
