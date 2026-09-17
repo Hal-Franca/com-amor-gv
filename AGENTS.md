@@ -5,7 +5,7 @@ Instruções para agentes de IA trabalhando neste repositório.
 ## Stack
 
 - Site estático de 1 página: `index.html` com CSS inline. **Sem frameworks, sem build, sem dependências externas, sem backend.**
-- Deploy: arrastar a pasta no Netlify Drop. `netlify.toml` só tem headers de segurança.
+- Deploy: arrastar a pasta no Netlify Drop ou deploy via GitHub conectado. `netlify.toml` tem headers de segurança, cache de assets e `ignore` para build só em produção.
 - Dono do repo edita tudo localmente; a profissional (mãe dele) não edita nada.
 
 ## Convenções de conteúdo (não quebrar)
@@ -21,10 +21,17 @@ Instruções para agentes de IA trabalhando neste repositório.
 ## Convenções técnicas
 
 - Manter tudo em `index.html` (não criar arquivos CSS/JS separados sem pedir).
-- Imagens em `assets/img/` com caminho relativo. Foto de perfil: `assets/img/foto-perfil.png`.
+- Imagens em `assets/img/` com caminho relativo. Foto de perfil: `assets/img/foto-perfil.webp` (840x1050, `loading="lazy"`).
 - Paleta: vinho `#8E2A4A`, vinho escuro `#6E1F39`, rosa `#FCECEF`, bege `#FFF8F3`, texto `#4A3540`, verde zap `#25D366`.
 - Mobile-first: testar em 360px de largura. Não adicionar fontes externas (performance no 4G).
 - Nunca commitar fotos de clientes, dados pessoais ou arquivos `*-ref.*` - o `.gitignore` já bloqueia esses padrões; se um novo tipo de dado pessoal surgir, adicionar o padrão ao `.gitignore` antes de commitar.
+
+## Branches e deploy
+
+- `prod` = produção: único branch que publica em `com-amor-gv.netlify.app`. Nunca commitar teste direto aqui.
+- `staging` = mudanças em teste: abrir PR `staging` -> `prod` e conferir local (mobile 360px + desktop) antes do merge, pois só produção gera build.
+- `dev` = experimentos do dia a dia; branches `dev/*` ou `feat/*` para mudanças maiores; apagar após o merge.
+- Netlify: Production branch `prod`, auto publishing on. Só produção faz build (`ignore` no `netlify.toml`); Branch deploys e Deploy Previews off para economizar banda.
 
 ## Antes de finalizar qualquer mudança
 

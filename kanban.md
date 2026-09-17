@@ -7,23 +7,27 @@
 - [x] MVP `index.html` (7 seções: topo, sobre, serviços, como funciona, valores, FAQ, contato)
 - [x] Botões WhatsApp clicáveis `(33) 99171-7907` (4 links `wa.me`)
 - [x] Regras no site: masculino só com referência, sem carro próprio, valor a combinar, bairros via WhatsApp
-- [x] Foto real aplicada (`assets/img/foto-perfil.png`); `foto3` (jaleco rosa) rejeitada e descartada
+- [x] Foto real aplicada e otimizada (`assets/img/foto-perfil.webp`, 840x1050, ~18KB); `foto3` (jaleco rosa) rejeitada e descartada
 - [x] Texto do Sobre corrigido + termo padrão travado: **"idosos"**
 - [x] Pastas organizadas p/ GitHub (`assets/img`, `logo.svg`, `netlify.toml`, docs)
 - [x] `README.md`, `AGENTS.md`, este kanban
+- [x] Netlify só `prod`: `ignore` no `netlify.toml` (staging/dev/previews não enviam nada) + cache longo de assets
+- [x] Workflow de branches: `prod` publica, `staging` testa, `dev` experimenta; sem preview (conferir local)
 
 ## Doing
 
 - [ ] Revisar o site localmente (duplo clique no `index.html`)
-- [ ] Subir no Netlify Drop e testar no celular (link obscuro, **não divulgar ainda**)
+- [ ] Confirmar no Netlify: production branch `prod`, Branch deploys off, Deploy Previews off (só `prod` publica)
+- [ ] Testar no celular via link oficial (não divulgar ainda)
+- [x] Título sem "ama" viúva + zero travessões (commit `20f4bc8`, já no `prod`)
+- [x] Workflow de branches: `prod` publica, `staging` testa, PR conferido no local (sem preview)
 
 ## To Do: site
 
 - [ ] Aprovação final do visual pela profissional
 - [ ] Divulgar link (bio do futuro Instagram)
 - [ ] Depoimentos reais (seção nova quando houver clientes)
-- [ ] Domínio próprio (ex: `comamorgv.com.br`, ~R$ 40–60/ano) - opcional
-- [ ] Migrar deploy de Drop manual p/ Git + deploy automático (quando as edições ficarem frequentes)
+- [ ] Domínio próprio (ex: `comamorgv.com.br`, ~R$ 40-60/ano) - opcional
 
 ## To Do: Instagram (anotações)
 
@@ -39,7 +43,7 @@
 - Grade inicial (9 posts): 1 quem sou eu (foto real) · 2 o que é "filha de aluguel" / o que NÃO é ·
   3 serviços p/ idosos · 4 acompanhamento externo sem carro · 5 apoio em rotina/videochamada ·
   6 massoterapia e bem-estar · 7 neurodivergentes · 8 pets de pequeno porte · 9 como agendar + área GV
-- Ritmo: 2–3 posts/semana + stories simples diários
+- Ritmo: 2-3 posts/semana + stories simples diários
 - Pilares: confiança (bastidor, depoimento, FAQ preço/deslocamento) · educativo (solidão idosa,
   autonomia, dicas de consulta, organização de remédios) · humanização (caminhada, café, datas)
 - Ferramentas grátis: Canva (artes, mesma paleta do site) + CapCut (reels) + celular
