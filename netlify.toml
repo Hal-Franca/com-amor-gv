@@ -1,5 +1,9 @@
 [build]
   publish = "."
+  # Site estatico sem comando de build. So o branch prod em contexto
+  # de producao gera deploy. Todo o resto (staging, dev, previews)
+  # e ignorado: nao envia nada e nao gasta banda nem minutos de build.
+  ignore = 'test "$CONTEXT" != "production" -o "$BRANCH" != "prod"'
 
 [[headers]]
   for = "/*"
@@ -7,3 +11,11 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache longo para assets com hash/nome estavel - visitantes que
+# retornam nao baixam de novo (economiza banda). O index.html
+# continua sem cache longo para atualizar rapido.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

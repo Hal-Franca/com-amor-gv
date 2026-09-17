@@ -3,7 +3,7 @@
 Site institucional de uma página para serviço de companhia e cuidado em **Governador Valadares/MG**: acompanhamento de idosos, apoio a neurodivergentes e cuidado de pets de pequeno porte. Venda 100% pelo WhatsApp.
 
 - **Status:** MVP em desenvolvimento
-- **Hospedagem:** Netlify (plano grátis, sem build, sem plugins) - deploy via GitHub conectado
+- **Hospedagem:** Netlify (plano grátis, sem build, sem plugins) - deploy via GitHub conectado, só `prod` publica
 - **Custo:** R$ 0
 
 ## Estrutura
@@ -11,10 +11,10 @@ Site institucional de uma página para serviço de companhia e cuidado em **Gove
 ```
 com-amor-gv/
 ├── index.html          # site inteiro (HTML + CSS inline, sem dependências)
-├── netlify.toml        # headers de segurança p/ Netlify
+├── netlify.toml        # headers de segurança + cache de assets + build só em `prod`
 ├── assets/
 │   ├── img/
-│   │   ├── foto-perfil.png   # foto real da profissional (publicada)
+│   │   ├── foto-perfil.webp  # foto real da profissional (publicada, otimizada)
 │   │   └── foto1-ref.jpeg    # referência local - ignorada pelo git (.gitignore)
 │   └── logo.svg              # logo (coração + Com Amor GV)
 ├── .gitignore          # bloqueia dados pessoais e referências
@@ -27,12 +27,15 @@ com-amor-gv/
 
 Duplo clique em `index.html`: abre no navegador, sem servidor.
 
-## Publicar / atualizar (Netlify Drop)
+## Publicar / atualizar (só `prod` publica)
 
-1. Acesse `app.netlify.com/drop`
-2. Arraste a pasta `com-amor-gv` inteira
-3. Pronto: link `*.netlify.app` (renomeável em Site settings → Change site name)
-4. Para atualizar: edite os arquivos, arraste a pasta de novo em Deploys
+Fluxo GitHub (principal): `dev` -> `staging` -> `prod` via PR. Só `prod` gera deploy.
+
+1. Abra PR `staging` -> `prod` e confira local (mobile 360px + desktop)
+2. Merge em `prod` publica em `com-amor-gv.netlify.app`
+3. Netlify: Production branch `prod`, Branch deploys off, Deploy Previews off
+
+Alternativa manual: arraste a pasta em `app.netlify.com/drop` para atualizar o link.
 
 > Arquivos de referência e dados pessoais nunca vão para o git: o `.gitignore` bloqueia
 > `*-ref.*`, pastas `ref/`, `dados-pessoais/`, `clientes/`, `documentos/` e PDFs. Ver seção Segurança.
@@ -41,13 +44,13 @@ Duplo clique em `index.html`: abre no navegador, sem servidor.
 
 - **Nunca commitar:** fotos de clientes, documentos (CPF, RG, endereço), prints com dados pessoais, arquivos `*-ref.*`.
 - **Onde guardar esse material:** fora do repo (ex: pasta `Default Project/`, só local) ou nas pastas bloqueadas acima.
-- **Exceções intencionais e públicas:** foto da profissional (`foto-perfil.png`), WhatsApp comercial e cidade: são o conteúdo do site.
+- **Exceções intencionais e públicas:** foto da profissional (`foto-perfil.webp`), WhatsApp comercial e cidade: são o conteúdo do site.
 - Antes de cada `push`, rode `git status` e confira que só entram arquivos do site.
 
 ## Editar conteúdo
 
 - Textos: direto no `index.html` (seções: topo, sobre, serviços, como funciona, valores, FAQ, contato)
-- Foto: substituir `assets/img/foto-perfil.png` mantendo o nome
+- Foto: substituir `assets/img/foto-perfil.webp` mantendo o nome (manter .webp leve, ~840px de largura)
 - WhatsApp: trocar o número `5533991717907` nos links `wa.me/...` (4 ocorrências)
 - Cores: variáveis CSS em `:root` (`--vinho #8E2A4A`, `--rosa #FCECEF`, `--bege #FFF8F3`)
 
